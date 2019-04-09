@@ -72,7 +72,7 @@ You can share the layer with other AWS accounts by executing the following comma
 
 ```bash
 aws lambda add-layer-version-permission \
-  --layer-name node-10-runtime \
+  --layer-name node-6-10-3-runtime \
   --version-number 1 \
   --principal "*" \
   --statement-id publish \
@@ -83,8 +83,8 @@ Response:
 
 ```json
 {
-    "RevisionId": "8b5b2e27-5013-4983-ac1a-9008dff90bac",
-    "Statement": "{\"Sid\":\"publish\",\"Effect\":\"Allow\",\"Principal\":\"*\",\"Action\":\"lambda:GetLayerVersion\",\"Resource\":\"arn:aws:lambda:us-east-2:356111732087:layer:node-10-runtime:1\"}"
+    "Statement": "{\"Sid\":\"publish\",\"Effect\":\"Allow\",\"Principal\":\"*\",\"Action\":\"lambda:GetLayerVersion\",\"Resource\":\"arn:aws:lambda:eu-west-1:035907498810:layer:node-6-10-3-runtime:1\"}",
+    "RevisionId": "53687d64-633f-460b-9c55-c7679d6b2104"
 }
 ```
 
@@ -102,12 +102,12 @@ Let's assume that your lambda function is packaged as `lambda.zip` file and the 
 
     ```bash
     aws lambda create-function \
-      --region us-east-2 \
-      --function-name node-10-runtime-example \
+      --region us-east-1 \
+      --function-name node-6-10-3-runtime-example \
       --zip-file fileb://lambda.zip \
       --handler hello.handler \
       --runtime provided \
-      --layers "arn:aws:lambda:us-east-2:356111732087:layer:node-10-runtime:2" \
+      --layers "arn:aws:lambda:eu-west-1:035907498810:layer:node-6-10-3-runtime:1" \
       --role arn:aws:iam::356111732087:role/lambda-role
       out.txt
     ```

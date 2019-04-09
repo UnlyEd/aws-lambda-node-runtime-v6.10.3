@@ -1,8 +1,13 @@
-# AWS Lambda NodeJS-10 LTS Runtime
+# AWS Lambda NodeJS-6.10.3 LTS Runtime
 
-AWS Lambda runtime API implemented in Node.js. The supported version is usually the latest LTS.
+AWS Lambda runtime API implemented in Node.js.
 
-It's easy to use this project and build Node.js runtime that will target any version - just replace the version number in `auto/package` with your preferred one.
+> This project main goal is to provide a runtime layer usable by anyone, which is as close as possible as the official 6.10 AWS Lambda runtime.
+As this 6.10 runtime will be deprecated by the end of April 2019, it can be safely replaced by this runtime layer.
+ARN: `arn:aws:lambda:eu-west-1:035907498810:layer:node-6-10-3-runtime:1`
+This project provides a fixed 6.10.3 version which is not meant to be updated.
+
+If you wish to use a different node version, then take a look at the https://github.com/janaz/aws-lambda-node-runtime
 
 ## Current versions
 

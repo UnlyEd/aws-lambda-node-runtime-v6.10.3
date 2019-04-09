@@ -6,7 +6,7 @@ It's easy to use this project and build Node.js runtime that will target any ver
 
 ## Current versions
 
-* Node.js - **10.15.3**
+* Node.js - **6.10.3**
 * aws-sdk - **2.422.0**
 
 ## Goals
@@ -39,8 +39,8 @@ Deploy the runtime layer using the following command:
 
 ```bash
 aws lambda publish-layer-version \
-  --layer-name node-10-runtime \
-  --description "nodejs-10.15.3 aws-cli-2.422.0" \
+  --layer-name node-6-10-3-runtime \
+  --description "nodejs-6.10.3 aws-cli-2.422.0" \
   --compatible-runtimes provided \
   --license-info Apache-2.0 \
   --zip-file fileb://stage/layer.zip
@@ -49,15 +49,15 @@ aws lambda publish-layer-version \
 The output will look like this:
 ```json
 {
-    "LayerVersionArn": "arn:aws:lambda:us-east-2:356111732087:layer:node-10-runtime:1",
-    "Description": "nodejs-10.15.3 aws-cli-2.422.0",
-    "CreatedDate": "2018-12-02T22:32:00.572+0000",
-    "LayerArn": "arn:aws:lambda:us-east-2:356111732087:layer:node-10-runtime",
     "Content": {
-        "CodeSize": 18104889,
-        "CodeSha256": "VonrpX23FWJOmE4lvhpox+9PS9kuY4sng0o0wxNTROs=",
-        "Location": "https://awslambda-us-east-2-layers.s3.us-east-2.amazonaws.com/snapshots/356111732087/node-10-runtime-f3415c38-d865-46b6-ae42-009985092116?......"
+        "Location": "https://awslambda-eu-west-1-layers.s3.eu-west-1.amazonaws.com/snapshots/035907498810/node-6-10-3-runtime-10db7cbc-a9fd-4483-a39c-e257c0e3ab8c?versionId=yzP94rYEwEuFxVKEVay35hq6ZEijvkyn&X-Amz-Security-Token=AgoJb3JpZ2luX2VjEJD%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMSJHMEUCIGotH%2F9WChJtLSUhGI4whXBkHZfaIadlr6nHT2s4P2bQAiEA3SxE3L6hh689HnYc3tZxiiMcb4E2IcSjIKK4hCSjwV8q2gMIWRABGgw5NTQzNjkwODI1MTEiDIEXKGR6Nvc4Esh2Zyq3Ayaofx%2BBRbsjzmQN%2FjdwjP%2Bq3lfuFZYv2xrboiLLg0Pg6KZCSGBnHkolJh9n8suEIxGMgbujSCJC8RaTrPsz%2F55k9L9yWxuU1UJ%2BzUm6Xhh1RC%2Fu0D4OCocrI0tssubKEUdCTJtTMgJ5dhProRQ8ZWRy7%2FsP574n3qoiD1h5BwZIh%2FQibETeJKWyCRMvkw%2FyqLVIykh2gqvNBzgZRZfUko%2BWivmCKbJb4eNuDZTxtR5ZhHuLEMrR7dhhAA4CyHJwnN%2F3ifBVTIWtDXTsKPQha8iG5H3YZgfxYMhg8rArq3qs6ordD0dDq9g2UoJ8dEGzKf3t0vUKEzuOjMyDaSt7Kd4tFuOeWQCMXcdD8txIj3ONuCG7iDkpOA7RbPke%2BusZj0R8aNYa6vzpctwGNRLjJJNZldlWvPGI5JyERO17VXzJ7kVto5TTEki028HlYLyPWxulKkr7VCp73uqDLIlM1qfcbstr7%2BWqp21gPC%2BW17KP7HsO6c3bdljD2ES86EfBmdRNM0NTgWwV7wrrPZT2PfXbXltqVZL%2BTaRXV8tqotDEoLmePlHO1REraczGqEr0USSn%2FivlVacwupex5QU6tAHyDwX9Mb%2FTr6SwPLjUK%2Be0lSmMqdnY9yXrsaz2Gcu%2FaJDxvq2VD%2BpJgXC8fhgXw%2FBhC%2BSp4x4Elu%2BvnVBT0n24XbHWM0ksixC3g70WaOl%2BX6SHH%2F3VVw8VQd30ad5YB7tHTTP%2BHYyS1aeDVe1p7Wc5NTOgz%2F8zYSwDYWK0%2FWOB1htjZ50IYuwx%2ByJmZ6nfkkMB2jQ%2Fc2fK9M3u30fsJ3JI229V73m6I0llpEJAQxGBiTgGwwE%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20190409T083848Z&X-Amz-SignedHeaders=host&X-Amz-Expires=600&X-Amz-Credential=ASIA54NGUQSHZLCX7QEL%2F20190409%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Signature=6af501fb9ecb624a49d87571ca992e3765f2b601fda8ffed1c95107867cdf617",
+        "CodeSha256": "ZdPhRnSjPGoD8fOSgbe9807tA5G5EZJWm7vTUFmsqLw=",
+        "CodeSize": 15448997
     },
+    "LayerArn": "arn:aws:lambda:eu-west-1:035907498810:layer:node-6-10-3-runtime",
+    "LayerVersionArn": "arn:aws:lambda:eu-west-1:035907498810:layer:node-6-10-3-runtime:1",
+    "Description": "nodejs-6.10.3 aws-cli-2.422.0",
+    "CreatedDate": "2019-04-09T08:38:59.912+0000",
     "Version": 1,
     "CompatibleRuntimes": [
         "provided"

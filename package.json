@@ -1,5 +1,5 @@
 {
-  "name": "node-custom-execution-environment",
+  "name": "aws-lambda-node-runtime-v6.10.3",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Tomasz Janowski <tomasz.janowski@rea-group.com>",

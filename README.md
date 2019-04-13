@@ -12,6 +12,12 @@ AWS Lambda runtime API implemented in Node.js.
 
 If you wish to use a different node version, then take a look at the https://github.com/janaz/aws-lambda-node-runtime
 
+## Examples
+
+Go to our [serverless-node6.10.3-custom-runtime live example](https://pobw1qel41.execute-api.eu-west-1.amazonaws.com/development/)
+
+Check the [example code](./examples/serverless-node6.10.3-custom-runtime) to see how to use this custom runtime with the Serverless Framework
+
 ## Current versions
 
 * Node.js - **6.10.3**

@@ -1,0 +1,24 @@
+service: node6-10-3-custom-runtime
+
+custom:
+  layers: # XXX This was added
+    - arn:aws:lambda:eu-west-1:035907498810:layer:node-6-10-3-runtime:2
+  env: ${env:ENV, 'development'}
+
+provider:
+  name: aws
+  runtime: provided # XXX This was changed
+  stage: ${self:custom.env}
+  region: ${opt:region, 'eu-west-1'}
+
+functions:
+  hello:
+    handler: handler.hello
+    layers: ${self:custom.layers} # XXX This was added
+    events:
+    - http:
+        method: ANY
+        path: /
+    - http:
+        method: ANY
+        path: /{any+} # Catch all routes and redirect to main handler

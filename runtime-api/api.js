@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const stringify = require('json-stringify-safe');
 
 const api = express();
 
@@ -17,17 +18,17 @@ api.get('/2018-06-01/runtime/invocation/next', (_, res) => {
 });
 
 api.post('/2018-06-01/runtime/invocation/:id/error', (req, res) => {
-  console.log("invocation error", JSON.stringify(req.body));
+  console.log("invocation error", stringify(req.body));
   res.json({});
 });
 
 api.post('/2018-06-01/runtime/invocation/:id/response', (req, res) => {
-  console.log("invocation response", JSON.stringify(req.body));
+  console.log("invocation response", stringify(req.body));
   res.json({});
 });
 
 api.post('/2018-06-01/runtime/init/error', (req, res) => {
-  console.log("init error", JSON.stringify(req.body));
+  console.log("init error", stringify(req.body));
   res.json({});
 });
 

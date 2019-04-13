@@ -13,6 +13,7 @@
     "express": "^4.16.4"
   },
   "dependencies": {
-    "aws-sdk": "2.422.0"
+    "aws-sdk": "2.422.0",
+    "json-stringify-safe": "5.0.1"
   }
 }

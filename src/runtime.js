@@ -1,4 +1,5 @@
 const http = require('http');
+const stringify = require('json-stringify-safe');
 
 let _lambdaHandler;
 const getLambdaHandler = () => {
@@ -23,7 +24,7 @@ const request = (method, path, body) => {
     }
     let payload;
     if (typeof body !== 'undefined') {
-      payload = JSON.stringify(body);
+      payload = stringify(body);
       headers['Content-Type'] = 'application/json',
       headers['Content-Length'] = Buffer.byteLength(payload)
     }

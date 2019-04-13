@@ -6,7 +6,7 @@ AWS Lambda runtime API implemented in Node.js.
 > 
 > As this 6.10 runtime will be deprecated by the end of April 2019, it can be safely replaced by this runtime layer.
 > 
-> **ARN**: `arn:aws:lambda:eu-west-1:035907498810:layer:node-6-10-3-runtime:1`
+> **ARN**: `arn:aws:lambda:eu-west-1:035907498810:layer:node-6-10-3-runtime:2`
 >
 >This project provides a fixed 6.10.3 version which is not meant to be updated.
 

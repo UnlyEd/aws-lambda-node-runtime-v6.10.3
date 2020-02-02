@@ -1,3 +1,5 @@
+> This project has been forked to customise behaviour for our needs, but didn't answer our needs in the end and is not actively used anymore. Kept for reference.
+
 # AWS Lambda NodeJS-6.10.3 LTS Runtime
 
 AWS Lambda runtime API implemented in Node.js.
